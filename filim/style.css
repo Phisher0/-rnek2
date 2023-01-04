@@ -1,0 +1,303 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+/* temel css başla */
+* {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  height: 200vh;
+  font-family: "Roboto", sans-serif;
+}
+.container {
+  background-color: black;
+  color: white;
+}
+/* temel css son */
+
+/*  navbar başlangıç */
+.navbar {
+  background-color: #000;
+  height: 60px;
+  color: white;
+  position: sticky;
+  top: 0;
+}
+.navbar-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 50px;
+}
+.logo {
+  color: red;
+}
+
+.menu-list {
+  display: flex;
+  list-style: none;
+  column-gap: 30px;
+  padding: 0;
+}
+
+
+.menu-list-item {
+  cursor: pointer;
+}
+
+.menu-list-item:hover {
+  font-weight: bold;
+}
+
+.menu-list-item.active {
+  font-weight: bold;
+}
+
+.profile-picture {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.profile-text-container {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+}
+
+.profil-conteiner {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  line-height: 1px;
+}
+
+.toggle {
+  width: 40px;
+  background-color: white;
+  height: 20px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+}
+
+.toggle-icon {
+  color: gold;
+}
+
+.toggle-boll {
+  width: 18px;
+  height: 18px;
+  background-color: black;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  right: 1px;
+}
+
+/* navbar son */
+
+/* sidebar başlangıç */
+
+.sidebar {
+  background-color: #000;
+  color: white;
+  height: 100%;
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+  row-gap: 40px;
+  position: fixed;
+  top: 0;
+}
+
+.sidebar i {
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+/* sidebar son */
+
+/* featured başlangıç */
+.content-wrapper {
+  margin-left: 50px;
+}
+.featured-content {
+  background: url(img/spiderman.jpg);
+  padding: 50px;
+  height: calc(100vh - 160px);
+  background-size: 100% 100%;
+}
+
+.featured-title {
+  width: 400px;
+}
+
+.featured-desc {
+  width: 500px;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 10px;
+  margin: 30px 0;
+  
+}
+
+.featured-buttons {
+  display: flex;
+  column-gap: 20px;
+}
+.featured-buttons button {
+  padding: 10px 25px;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  column-gap: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.featured-buttons .info-button {
+  background-color: rgb(145, 142, 142, 0.5);
+  color: white;
+}
+/* featured son */
+.movie-list-filtre {
+  margin-left: 50;
+  margin: 20px 0 20px 50px;
+  padding: 20px;
+}
+.movie-list-filtre select {
+  background-color: black;
+  color: white;
+  padding: 7px 0;
+  width: 125px;
+  border-radius: 30px;
+}
+/* movie giriş */
+/* <!-- movie list başla --> */
+.movie-list-conteiner {
+  margin-left: 70px;
+}
+.movie-list {
+  list-style: none;
+  padding: 0;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  column-gap: 30px;
+  transform: translateX(0);
+  transition: 1s all ease-in-out;
+}
+.movie-list-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+.movie-item {
+  position: relative;
+}
+.movie-item:hover .movi-item-title,
+.movie-item:hover .movi-item-buttons {
+  opacity: 1;
+}
+
+.movie-item:hover .movie-item-img {
+  transform: scale(1.2);
+  margin: 0 40px;
+  opacity: 0.5;
+}
+
+.movie-item-img {
+  width: 270px;
+  border-radius: 5px;
+  height: 200px;
+  object-fit: cover;
+  transition: 1s all ease-in-out;
+}
+.movi-item-title {
+  background-color: rgb(40, 40, 40, 0.4);
+  padding: 0 10px;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  left: 50px;
+  opacity: 0;
+  transition: 1s all ease-in-out;
+}
+
+.movi-item-buttons {
+  background-color: rgb(40, 40, 40, 0.4);
+  padding: 10px;
+  font-size: 10px;
+  font-weight: bold;
+  position: absolute;
+  bottom: 10px;
+  left: 50px;
+  display: flex;
+  column-gap: 15px;
+  opacity: 0;
+  transition: 1s all ease-in-out;
+}
+.movi-item-buttons i {
+  cursor: pointer;
+  opacity: 0.5;
+  font-size: 20px;
+  transition: 0.5s all ease;
+}
+.movi-item-buttons i:hover {
+  opacity: 1;
+}
+/* movi-list son */
+.arrow {
+  width: 100px;
+  display: flex;
+  font-size: 120px;
+  position: absolute;
+  right: 0;
+  top: 100px;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: 1s all ease-in-out;
+}
+.arrow:hover {
+  opacity: 1;
+}
+/* darak mod */
+.container.active {
+  background-color: white;
+}
+.navbar.active {
+  background-color: white;
+  color: black;
+}
+.sidebar .active {
+  background-color: white;
+}
+.sidebar i.active {
+  color: black;
+}
+
+.movie-list-title .active{
+  color: black;
+}
+
+.toggle.active {
+  background-color: black;
+}
+.toggle-boll .active {
+  background-color: white;
+  transform: translateX(-20px);
+}
+
+.movie-list-filtre .active {
+  background-color: white;
+  color: black;
+}
+
+/* dak mod  */
